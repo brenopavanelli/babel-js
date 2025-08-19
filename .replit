@@ -1,3 +1,14 @@
 modules = ["nodejs-20"]
 [nix]
 channel = "stable-25_05"
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Rodar JS"
+mode = "sequential"
+author = 36304999
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "node main.js"
